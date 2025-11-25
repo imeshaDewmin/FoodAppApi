@@ -3,6 +3,7 @@ package com.selfstudy.foodapp.menu.dto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.selfstudy.foodapp.category.entity.Category;
+import com.selfstudy.foodapp.review.dto.ReviewDto;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;

@@ -3,6 +3,7 @@ package com.selfstudy.foodapp.order.entity;
 import com.selfstudy.foodapp.auth_users.entity.User;
 import com.selfstudy.foodapp.enums.OrderStatus;
 import com.selfstudy.foodapp.enums.PaymentStatus;
+import com.selfstudy.foodapp.payment.entity.Payment;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

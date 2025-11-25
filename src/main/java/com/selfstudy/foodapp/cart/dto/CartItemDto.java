@@ -2,6 +2,7 @@ package com.selfstudy.foodapp.cart.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.selfstudy.foodapp.menu.dto.MenuDto;
 import jakarta.persistence.*;
 import lombok.Data;
 

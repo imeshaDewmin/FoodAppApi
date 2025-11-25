@@ -2,6 +2,7 @@ package com.selfstudy.foodapp.menu.entity;
 
 import com.selfstudy.foodapp.category.entity.Category;
 import com.selfstudy.foodapp.order.entity.OrderItem;
+import com.selfstudy.foodapp.review.entity.Review;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -33,6 +34,6 @@ public class Menu {
     @OneToMany(mappedBy = "menu", cascade = CascadeType.ALL)
     private List<OrderItem> orderItems;
 
-    @OneToMany(mappedBy = "menu", cascade = CascadeType.ALL,orphanRemoval = true)
+    @OneToMany(mappedBy = "menu")
     private List <Review> reviews;
 }
