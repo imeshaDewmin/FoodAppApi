@@ -36,7 +36,7 @@ public class User {
     private String phoneNumber;
     private String profileUrl;
     private String address;
-    private String isActive;
+    private boolean isActive;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
