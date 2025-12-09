@@ -30,6 +30,7 @@ public class Notification {
     @Lob
     private String body;
 
+    @Enumerated(EnumType.STRING)
     private NotificationType type;
 
     private final LocalDateTime createdAt= LocalDateTime.now();

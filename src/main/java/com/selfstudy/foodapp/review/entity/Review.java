@@ -35,6 +35,6 @@ public class Review {
     private Long orderId;
 
     @ManyToOne
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "menu_id")
     private Menu menu;
 }
