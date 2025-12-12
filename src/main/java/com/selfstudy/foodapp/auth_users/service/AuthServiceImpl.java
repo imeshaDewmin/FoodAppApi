@@ -51,18 +51,15 @@ public class AuthServiceImpl implements AuthService {
 
         List<Role> userRoles;
 
-        if(registrationRequest.getRoles()!=null && !registrationRequest.getRoles().isEmpty()){
+        if (registrationRequest.getRoles() != null && !registrationRequest.getRoles().isEmpty()) {
             userRoles = registrationRequest.getRoles().stream()
-                    .map(roleName-> roleRepository.findByName(roleName.toUpperCase())
-                            .orElseThrow(()->new NotFoundException("Role not found")))
+                    .map(roleName -> roleRepository.findByName(roleName.toUpperCase())
+                            .orElseThrow(() -> new NotFoundException("Role not found")))
                     .toList();
-        }
-
-        //if a role is not present, default to CUSTOMER
-        else {
+        } else {
             Role defaultRole = roleRepository.findByName("CUSTOMER")
-                    .orElseThrow(()-> new NotFoundException("CUSTOMER role not found"));
-        userRoles = List.of(defaultRole);
+                    .orElseThrow(() -> new NotFoundException("CUSTOMER role not found"));
+            userRoles = List.of(defaultRole);
         }
 
         //build a user object
@@ -85,7 +82,6 @@ public class AuthServiceImpl implements AuthService {
         return Response.builder()
                 .statusCode(HttpStatus.OK.value())
                 .message("User registered successfully")
-                .data(userToSave)
                 .build();
 
     }
