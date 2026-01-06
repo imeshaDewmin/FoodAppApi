@@ -184,7 +184,7 @@ public class CartServiceImpl implements CartService {
 
         List<CartItem> cartItems = cart.getCartItems();
 
-        CartDto cartDto = modelMapper.map(cartItems, CartDto.class);
+        CartDto cartDto = modelMapper.map(cart, CartDto.class);
 
         // Calculate total amount
         BigDecimal totalAmount = BigDecimal.ZERO;
