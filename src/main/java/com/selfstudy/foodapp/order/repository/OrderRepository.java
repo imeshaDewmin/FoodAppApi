@@ -17,4 +17,6 @@ public interface OrderRepository extends JpaRepository<Order,Long> {
 
     @Query("SELECT COUNT(DISTINCT o.user.id) FROM Order o")
     long countDistinctUsers();
+
+    Long id(Long id);
 }
