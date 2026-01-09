@@ -3,12 +3,9 @@ package com.selfstudy.foodapp.payment.dto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.selfstudy.foodapp.auth_users.dto.UserDTO;
-import com.selfstudy.foodapp.auth_users.entity.User;
 import com.selfstudy.foodapp.enums.PaymentGateway;
 import com.selfstudy.foodapp.enums.PaymentStatus;
 import com.selfstudy.foodapp.order.dto.OrderDto;
-import com.selfstudy.foodapp.order.entity.Order;
-import jakarta.persistence.*;
 import lombok.Data;
 
 import java.math.BigDecimal;

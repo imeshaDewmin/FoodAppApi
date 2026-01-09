@@ -3,6 +3,7 @@ package com.selfstudy.foodapp.review.controller;
 import com.selfstudy.foodapp.response.Response;
 import com.selfstudy.foodapp.review.dto.ReviewDto;
 import com.selfstudy.foodapp.review.service.ReviewService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +22,7 @@ public class ReviewController {
 
     @PostMapping("/create")
     @PreAuthorize("isAuthenticated()")
-    public ResponseEntity<Response<ReviewDto>> createReview(@RequestBody ReviewDto reviewDto){
+    public ResponseEntity<Response<ReviewDto>> createReview(@RequestBody @Valid ReviewDto reviewDto){
         return ResponseEntity.ok(reviewService.createReview(reviewDto));
     }
 
