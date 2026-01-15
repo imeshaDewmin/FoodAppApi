@@ -3,7 +3,6 @@ package com.selfstudy.foodapp.cart.service;
 import com.selfstudy.foodapp.auth_users.entity.User;
 import com.selfstudy.foodapp.auth_users.service.UserService;
 import com.selfstudy.foodapp.cart.dto.CartDto;
-import com.selfstudy.foodapp.cart.dto.CartItemDto;
 import com.selfstudy.foodapp.cart.entity.Cart;
 import com.selfstudy.foodapp.cart.entity.CartItem;
 import com.selfstudy.foodapp.cart.repository.CartItemRepository;

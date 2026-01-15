@@ -2,13 +2,6 @@ package com.selfstudy.foodapp.review.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.selfstudy.foodapp.auth_users.dto.UserDTO;
-import com.selfstudy.foodapp.auth_users.entity.User;
-import com.selfstudy.foodapp.menu.dto.MenuDto;
-import com.selfstudy.foodapp.menu.entity.Menu;
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
